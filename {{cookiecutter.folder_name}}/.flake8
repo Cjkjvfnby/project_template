@@ -1,0 +1,12 @@
+[flake8]
+ignore = E203, E501, W503,  # handled by black
+         ANN101, ANN204
+exclude =
+    *_venv
+    venv_*
+max-complexity = 7
+max-cognitive-complexity = 5
+per-file-ignores =
+    test/*: D10,D101,D103,S101, ANN
+application-import-names = {{cookiecutter.module_name}}
+doctests = True

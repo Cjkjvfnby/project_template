@@ -1,0 +1,5 @@
+{
+    "folder_name": "my_module",
+    "module_name": "{{ cookiecutter.folder_name }}"
+
+}

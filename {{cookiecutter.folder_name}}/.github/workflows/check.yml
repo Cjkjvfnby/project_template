@@ -10,6 +10,8 @@ on:
     paths:
       - '**.py'
       - '.github/workflows/**'
+      - '.flake8'
+      - 'requirements-dev.txt'
 
 jobs:
   check:

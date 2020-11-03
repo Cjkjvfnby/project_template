@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v3.3.0
     hooks:
       - id: check-added-large-files
       - id: check-executables-have-shebangs
@@ -17,7 +17,7 @@ repos:
     hooks:
       - id: black
   - repo: https://gitlab.com/pycqa/flake8/
-    rev: 3.8.3
+    rev: 3.8.4
     hooks:
       - id: flake8
         additional_dependencies:
@@ -26,9 +26,9 @@ repos:
           - flake8-bugbear==20.1.4
           - flake8-builtins==1.5.3
           - flake8-cognitive-complexity==0.1.0
-          - flake8-comprehensions==3.2.3
+          - flake8-comprehensions==3.3.0
           - flake8-docstrings==1.5.0
-          - flake8-eradicate==0.4.0
+          - flake8-eradicate==1.0.0
           - flake8-import-order==0.18.1
           - flake8-mutable==1.2.0
           - flake8-print==3.1.4

@@ -8,14 +8,12 @@
 ## Formatting
 - `black .`
 
-## Check
-
+## Linting
 - `flake8`
 
 ## Run test
 - `pytest --cov={{cookiecutter.module_name}}` run test
 - `pytest --cov={{cookiecutter.module_name}} --cov-report html` run test with html report
-
 
 ## Install pre-commit
 - `pip install pre-commit`

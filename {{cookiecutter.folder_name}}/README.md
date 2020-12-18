@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/cjkjvfnby/declared_env)
+![](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 # Development
 

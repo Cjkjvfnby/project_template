@@ -7,6 +7,9 @@ exclude =
 max-complexity = 7
 max-cognitive-complexity = 5
 per-file-ignores =
+    # No docs and annotation required for tests
     test/*: D10, D101, D103, S101, ANN
+    # Skip unused imports in __init__ files
+    __init__.py: F401
 application-import-names = {{cookiecutter.module_name}}
 doctests = True

@@ -28,6 +28,9 @@ jobs:
       - name: Black check
         run: |
           black . --check
+      - name: Isort check
+        run: |
+          isort . --check -q
       - name: Lint with flake8
         run: |
           flake8 . --format="::error file=%(path)s,line=%(row)d,col=%(col)d::%(path)s:%(row)d:%(col)d: %(code)s %(text)s"

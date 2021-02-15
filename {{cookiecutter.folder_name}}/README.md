@@ -3,24 +3,40 @@
 # Development
 
 ## Install dev requirements
-`pip install -r dev-requirements.pip`
+```shell
+pip install -r dev-requirements.pip
+```
 
 ## Formatting
-- `black .`
+```shell
+black .
+isort .
+```
 
 ## Linting
-- `flake8`
+```shell
+flake8
+```
 
 ## Run test
-- `pytest --cov={{cookiecutter.module_name}}` run test
-- `pytest --cov={{cookiecutter.module_name}} --cov-report html` run test with html report
+```shell
+pytest --cov={{cookiecutter.module_name}} --cov-report html
+```
 
 ## Install pre-commit
-- `pip install pre-commit`
+- install
+  ```shell
+  pip install pre-commit
+  ```
 - add hooks
-  `pre-commit install`
-  `pre-commit install --hook-type commit-msg`
-- update to the latest versions `pre-commit autoupdate`
+  ```shell
+  pre-commit install
+  pre-commit install --hook-type commit-msg
+  ```
+- update to the latest versions 
+  ```shell
+  pre-commit autoupdate
+  ```
 
 Note:
 flake8 dependencies are duplicated in the `additional_dependencies` section.

@@ -2,5 +2,6 @@
 *_venv/
 venv_*/
 .idea/
+htmlcov/
 .coverage
 *.pyc

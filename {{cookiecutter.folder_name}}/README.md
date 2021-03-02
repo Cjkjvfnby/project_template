@@ -4,7 +4,7 @@
 
 ## Install dev requirements
 ```shell
-pip install -r dev-requirements.pip
+pip install -r requirements-dev.txt
 ```
 
 ## Formatting

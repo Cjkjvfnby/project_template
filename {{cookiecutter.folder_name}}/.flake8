@@ -9,7 +9,6 @@ exclude =
     *_venv
     venv_*
     venv
-max-complexity = 7
 max-cognitive-complexity = 5
 per-file-ignores =
     # No docs and annotation required for tests

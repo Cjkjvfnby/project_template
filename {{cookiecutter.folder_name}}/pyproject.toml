@@ -1,6 +1,5 @@
 [tool.black]
 include = '\.pyi?$'
-exclude = 'venv_* *_venv venv'
 
 [tool.isort]
 profile = "black"

@@ -24,10 +24,6 @@ pytest --cov={{cookiecutter.module_name}} --cov-report html
 ```
 
 ## Install pre-commit
-- install
-  ```shell
-  pip install pre-commit
-  ```
 - add hooks
   ```shell
   pre-commit install

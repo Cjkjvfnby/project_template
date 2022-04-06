@@ -42,7 +42,7 @@ jobs:
         with:
           path: coverage.xml
           skip_covered: true
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
           minimum_coverage: 42
           show_missing: true
           link_missing_lines: true

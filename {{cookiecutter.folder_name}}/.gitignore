@@ -4,5 +4,9 @@ venv_*/
 venv/
 .idea/
 htmlcov/
-.coverage
 *.pyc
+
+# Coverage
++coverage.xml
++htmlcov
++.coverage

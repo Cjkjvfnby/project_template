@@ -36,4 +36,15 @@ jobs:
           flake8 . --format="::error file=%(path)s,line=%(row)d,col=%(col)d::%(path)s:%(row)d:%(col)d: %(code)s %(text)s"
       - name: Test with pytest
         run: |
-          pytest -v --cov={{cookiecutter.module_name}}
+          pytest -v --cov={{cookiecutter.module_name}} --cov-report xml:coverage.xml
+      - name: Report coverage
+        uses: 5monkeys/cobertura-action@master
+        with:
+          path: coverage.xml
+          skip_covered: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          minimum_coverage: 42
+          show_missing: true
+          link_missing_lines: true
+          report_name: Poject coverage
+          link_missing_lines_source_dir: {{cookiecutter.module_name}}

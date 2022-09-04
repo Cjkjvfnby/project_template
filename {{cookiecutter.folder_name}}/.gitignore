@@ -7,6 +7,6 @@ htmlcov/
 *.pyc
 
 # Coverage
-+coverage.xml
-+htmlcov
-+.coverage
+coverage.xml
+htmlcov
+.coverage

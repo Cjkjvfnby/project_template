@@ -4,7 +4,8 @@ ignore = E203, E501, W503, PLC0301,  # handled by black
          D104,  # no docstring in public package
          D200,  # One-line docstring should fit on one line with quotes
          D107,  #  Missing docstring in __init__
-         PLC0114, PLC0115,PLC0116,  # Pylint docs
+         PLC0114, PLC0115, PLC0116,  # Pylint docs
+         PLE0401,  # Skip pylint imports
 
 exclude =
     *_venv

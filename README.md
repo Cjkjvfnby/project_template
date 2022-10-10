@@ -7,7 +7,7 @@
 
 # How to start
 
-[Install](https://cookiecutter.readthedocs.io/en/1.7.2/installation.html) Python and Cookiecutter.
+[Install](https://cookiecutter.readthedocs.io/en/latest/installation.html) Python and Cookiecutter.
 
 Execute command where you want to start a project.
 ```

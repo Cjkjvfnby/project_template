@@ -1,9 +1,10 @@
 [flake8]
-ignore = E203, E501, W503,  # handled by black
+ignore = E203, E501, W503, PLC0301,  # handled by black
          ANN101, ANN204, ANN401,
          D104,  # no docstring in public package
          D200,  # One-line docstring should fit on one line with quotes
          D107,  #  Missing docstring in __init__
+         PLC0114, PLC0115,PLC0116,  # Pylint docs
 
 exclude =
     *_venv

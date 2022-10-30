@@ -15,6 +15,12 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.2.0
+    hooks:
+      - id: pyupgrade
+        args:
+          - --py39-plus
   - repo: https://github.com/psf/black
     rev: 22.10.0
     hooks:
@@ -23,19 +29,19 @@ repos:
     rev: 5.0.4
     hooks:
       - id: flake8
-        additional_dependencies:
+        additional_dependencies: &plugins
           - flake8-annotations==2.9.1
           - flake8-bandit==4.1.1
-          - flake8-bugbear==22.9.23
+          - flake8-bugbear==22.10.27
           - flake8-builtins==2.0.0
           - flake8-cognitive-complexity==0.1.0
-          - flake8-comprehensions==3.10.0
+          - flake8-comprehensions==3.10.1
           - flake8-docstrings==1.6.0
           - flake8-eradicate==1.4.0
           - flake8-print==5.0.0
           - flake8-pytest-style==1.6.0
-          - flake8-return==1.1.3
-          - pep8-naming==0.13.1
+          - flake8-return==1.2.0
+          - pep8-naming==0.13.2
           - flake8-adjustable-complexity==0.0.6
           - flake8-expression-complexity==0.0.11
           - flake8-functions==0.0.7
@@ -43,8 +49,14 @@ repos:
           - flake8-scream==0.1.0
           - flake8-pie==0.16.0
           - flake8-use-pathlib==0.3.0
-          - pylint==2.15.4
+          - pylint==2.15.5
           - flake8-pylint==0.1.3
+  - repo: https://github.com/asottile/yesqa
+    rev: v1.4.0
+    hooks:
+      - id: yesqa
+        additional_dependencies:
+          *plugins
   - repo: https://github.com/timothycrosley/isort
     rev: 5.10.1
     hooks:
@@ -57,3 +69,7 @@ repos:
     rev: 'v0.982'
     hooks:
       - id: mypy
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.2
+    hooks:
+      - id: codespell

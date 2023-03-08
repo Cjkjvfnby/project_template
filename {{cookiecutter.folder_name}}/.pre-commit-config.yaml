@@ -3,7 +3,7 @@ default_stages:
   - manual
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v4.4.0
     hooks:
       - id: check-added-large-files
       - id: check-executables-have-shebangs
@@ -16,40 +16,40 @@ repos:
       - id: mixed-line-ending
       - id: trailing-whitespace
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.2.0
+    rev: v3.3.1
     hooks:
       - id: pyupgrade
         args:
           - --py39-plus
   - repo: https://github.com/psf/black
-    rev: 22.10.0
+    rev: 23.1.0
     hooks:
       - id: black
-  - repo: https://gitlab.com/pycqa/flake8/
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+  - repo: https://github.com/pycqa/flake8/
     rev: 5.0.4
     hooks:
       - id: flake8
         additional_dependencies: &plugins
-          - flake8-annotations==2.9.1
+          - flake8-annotations==3.0.0
           - flake8-bandit==4.1.1
-          - flake8-bugbear==22.10.27
-          - flake8-builtins==2.0.0
+          - flake8-bugbear==23.2.13
+          - flake8-builtins==2.1.0
           - flake8-cognitive-complexity==0.1.0
           - flake8-comprehensions==3.10.1
-          - flake8-docstrings==1.6.0
+          - flake8-docstrings==1.7.0
           - flake8-eradicate==1.4.0
           - flake8-print==5.0.0
-          - flake8-pytest-style==1.6.0
+          - flake8-pytest-style==1.7.2
           - flake8-return==1.2.0
-          - pep8-naming==0.13.2
-          - flake8-adjustable-complexity==0.0.6
-          - flake8-expression-complexity==0.0.11
-          - flake8-functions==0.0.7
+          - pep8-naming==0.13.3
           - flake8-simplify==0.19.3
           - flake8-scream==0.1.0
           - flake8-pie==0.16.0
           - flake8-use-pathlib==0.3.0
-          - pylint==2.15.5
           - flake8-pylint==0.1.3
   - repo: https://github.com/asottile/yesqa
     rev: v1.4.0
@@ -57,16 +57,12 @@ repos:
       - id: yesqa
         additional_dependencies:
           *plugins
-  - repo: https://github.com/timothycrosley/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
   - repo: https://github.com/jorisroovers/gitlint
-    rev: v0.17.0
+    rev: v0.19.0
     hooks:
       - id: gitlint
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 'v0.982'
+    rev: 'v1.1.1'
     hooks:
       - id: mypy
   - repo: https://github.com/codespell-project/codespell

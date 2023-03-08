@@ -1,22 +1,22 @@
 [flake8]
-ignore = E203, E501, W503, PLC0301,  # handled by black
+ignore =
+         # handled by black
+         E203, E501, W503,
          ANN101, ANN204, ANN401,
-         D104,  # no docstring in public package
-         D200,  # One-line docstring should fit on one line with quotes
-         D107,  #  Missing docstring in __init__
-         PLC0114, PLC0115, PLC0116,  # Pylint docs
-         PLE0401,  # Skip pylint imports
-
+         # no docstring in public package
+         D104,
+         # One-line docstring should fit on one line with quotes
+         D200,
+         #  Missing docstring in __init__
+         D107,
 exclude =
     *_venv
     venv_*
-    venv
 max-cognitive-complexity = 5
 per-file-ignores =
-    # No docs and annotation required for tests
-    tests/*.py:    D10, D101, D103, S101, ANN
-    conftest.py: D10, D101, D103, S101, ANN
+    # Ignore missing docs/annotations, and use of assert in tests
+    test/*: D10,D101,D103,S101,ANN
     # Skip unused imports in __init__ files
     __init__.py: F401
-
 doctests = True
+good-names=e

@@ -13,7 +13,7 @@ pip install -r requirements-dev.txt
   pre-commit install
   pre-commit install --hook-type commit-msg
   ```
-- update to the latest versions 
+- update to the latest versions
   ```shell
   pre-commit autoupdate
   ```

@@ -15,7 +15,7 @@ exclude =
 max-cognitive-complexity = 5
 per-file-ignores =
     # Ignore missing docs/annotations, and use of assert in tests
-    test/*: D10,D101,D103,S101,ANN
+    tests/*: D10, S101, ANN
     # Skip unused imports in __init__ files
     __init__.py: F401
 doctests = True

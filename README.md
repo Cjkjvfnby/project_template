@@ -9,7 +9,7 @@
 
 [Install](https://cookiecutter.readthedocs.io/en/latest/installation.html) Python and Cookiecutter.
 
-Execute command where you want to start a project.
+Execute command where you want to start a project, it will create top level directory.
 ```
 cookiecutter https://github.com/Cjkjvfnby/project_template
 ```

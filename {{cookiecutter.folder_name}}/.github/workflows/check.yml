@@ -12,6 +12,7 @@ on:
       - '.github/workflows/**'
       - '.flake8'
       - 'requirements-ci.txt'
+      - 'requirements.txt'
 
 jobs:
   check:
@@ -37,5 +38,5 @@ jobs:
           minimum_coverage: 42
           show_missing: true
           link_missing_lines: true
-          report_name: Poject coverage
+          report_name: Project coverage
           link_missing_lines_source_dir: {{cookiecutter.module_name}}

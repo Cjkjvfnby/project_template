@@ -9,6 +9,8 @@ ignore =
          D200,
          #  Missing docstring in __init__
          D107,
+         # Unnecessary else after return and raise, I try to keep logic on the same indent level for visibility
+         R505, R506,
 exclude =
     *_venv
     venv_*

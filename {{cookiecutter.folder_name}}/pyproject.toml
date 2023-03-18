@@ -1,25 +1,28 @@
 [tool.black]
 include = '\.pyi?$'
 
-[tool.isort]
-profile = "black"
-multi_line_output = 3
-skip_gitignore=true
-
-[tool.pylint.main]
-jobs = 0
-
-[tool.pylint."messages control"]
-disable = [
-    "C", # documentation
-    "import-error",
-    "too-few-public-methods"
-]
-
-
 [tool.pytest.ini_options]
 addopts = [
     "--doctest-modules",
     "--doctest-continue-on-failure",
     "--showlocals",
 ]
+
+[tool.ruff]
+select = ["ALL"]
+ignore = [
+    "ANN101", "ANN204", "ANN401",
+    "D104", # no docstring in public package
+    "D200", # One-line docstring should fit on one line with quotes
+    "D212",
+    "RSE102",
+    "D203",
+]
+line-length = 98
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"test/*" = ["D10", "D101", "D103", "S101", "ANN", "PLR2004"]
+
+[tool.ruff.mccabe]
+max-complexity = 5

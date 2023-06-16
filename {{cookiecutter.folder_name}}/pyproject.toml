@@ -17,6 +17,7 @@ ignore = [
     "D212",
     "RSE102",
     "D203",
+    "FLY002", # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
 ]
 line-length = 98
 

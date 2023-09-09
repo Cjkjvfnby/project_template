@@ -27,3 +27,9 @@ line-length = 98
 
 [tool.ruff.mccabe]
 max-complexity = 5
+
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    ]

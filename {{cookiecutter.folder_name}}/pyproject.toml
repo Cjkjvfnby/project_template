@@ -19,7 +19,7 @@ ignore = [
     "D203",
     "FLY002", # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
 ]
-line-length = 98
+target-version = "py39"
 
 [tool.ruff.per-file-ignores]
 "__init__.py" = ["F401"]

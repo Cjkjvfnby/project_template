@@ -9,7 +9,11 @@ You will get:
 
 # How to start
 
-[Install](https://cookiecutter.readthedocs.io/en/latest/installation.html) Python and Cookiecutter.
+- [Install Python](https://cookiecutter.readthedocs.io/en/latest/installation.html)  
+- install cookiecutter
+  ```shell
+  pip install cookiecutter
+  ```
 
 Execute a command where you want to start a project, it will create a top-level directory.
 ```

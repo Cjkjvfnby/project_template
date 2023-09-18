@@ -23,7 +23,7 @@ target-version = "py39"
 
 [tool.ruff.per-file-ignores]
 "__init__.py" = ["F401"]
-"test/*" = ["D10", "D101", "D103", "S101", "ANN", "PLR2004"]
+"tests/*" = ["D10", "D101", "D103", "S101", "ANN", "PLR2004"]
 
 [tool.ruff.mccabe]
 max-complexity = 5

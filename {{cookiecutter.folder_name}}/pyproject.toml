@@ -1,6 +1,3 @@
-[tool.black]
-include = '\.pyi?$'
-
 [tool.pytest.ini_options]
 addopts = [
     "--doctest-modules",
@@ -18,6 +15,7 @@ ignore = [
     "RSE102",
     "D203",
     "FLY002", # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
+    "G004", # logging with f string is ok
 ]
 target-version = "py39"
 
@@ -33,3 +31,6 @@ max-complexity = 5
 exclude_also = [
     "if TYPE_CHECKING:",
     ]
+
+[tool.ruff.format]
+line-ending = "native"

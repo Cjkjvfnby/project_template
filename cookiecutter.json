@@ -1,5 +1,6 @@
 {
     "folder_name": "my_module",
-    "module_name": "{{ cookiecutter.folder_name }}"
+    "module_name": "{{ cookiecutter.folder_name }}",
+    "minimal_python_version": "39"
 
 }

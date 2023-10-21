@@ -17,7 +17,7 @@ ignore = [
     "FLY002", # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
     "G004", # logging with f string is ok
 ]
-target-version = "py39"
+target-version = "py{{ cookiecutter.minimal_python_version }}"
 
 [tool.ruff.per-file-ignores]
 "__init__.py" = ["F401"]

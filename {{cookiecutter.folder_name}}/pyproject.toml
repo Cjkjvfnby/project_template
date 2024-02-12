@@ -6,6 +6,9 @@ addopts = [
 ]
 
 [tool.ruff]
+target-version = "py{{ cookiecutter.minimal_python_version }}"
+
+[tool.ruff.lint]
 select = ["ALL"]
 ignore = [
     "ANN101", "ANN204", "ANN401",
@@ -17,20 +20,19 @@ ignore = [
     "FLY002", # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
     "G004", # logging with f string is ok
 ]
-target-version = "py{{ cookiecutter.minimal_python_version }}"
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
 "tests/*" = ["D10", "D101", "D103", "S101", "ANN", "PLR2004"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 5
+
+[tool.ruff.format]
+line-ending = "native"
 
 
 [tool.coverage.report]
 exclude_also = [
     "if TYPE_CHECKING:",
     ]
-
-[tool.ruff.format]
-line-ending = "native"

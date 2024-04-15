@@ -12,13 +12,15 @@ target-version = "py{{ cookiecutter.minimal_python_version }}"
 select = ["ALL"]
 ignore = [
     "ANN101", "ANN204", "ANN401",
-    "D104", # no docstring in public package
-    "D200", # One-line docstring should fit on one line with quotes
+    "D104",  # no docstring in public package
+    "D200",  # One-line docstring should fit on one line with quotes
     "D212",
     "RSE102",
     "D203",
-    "FLY002", # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
-    "G004", # logging with f string is ok
+    "FLY002",  # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
+    "G004",  # logging with f string is ok
+    "COM812",  # handled by formatter
+    "ISC001",  # handled by formatter
 ]
 
 [tool.ruff.lint.per-file-ignores]

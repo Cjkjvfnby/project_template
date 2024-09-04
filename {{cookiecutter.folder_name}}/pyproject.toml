@@ -13,10 +13,11 @@ select = ["ALL"]
 ignore = [
     "ANN101", "ANN204", "ANN401",
     "D104",  # no docstring in public package
+    "D107", "D105", # docstring for magic method
     "D200",  # One-line docstring should fit on one line with quotes
-    "D212",
-    "RSE102",
-    "D203",
+    "D203",  # No blank lines before class docstring
+    "D212",  # Start first line of docstring on the line with quotes
+    "RSE102",   # Remove parenthesis after raise Exception
     "FLY002",  # fix produces invalid code https://github.com/astral-sh/ruff/issues/5150
     "G004",  # logging with f string is ok
     "COM812",  # handled by formatter
